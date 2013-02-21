@@ -16,28 +16,33 @@ import org.testng.annotations.Test;
 
 /**
  *
- * @author 211111279
+ * @author Karriem
  */
-public class FloatInterfaceNGTest {
-    private static FloatInterface flt;
-    private static AssertFloat aFloat;
+public class IntInterfaceTestNGTest {
+    private static AssertInt aInt;
+    private static IntInterface intI;
     private static ApplicationContext ctx;
     
-    public FloatInterfaceNGTest() {
+    public IntInterfaceTestNGTest() {
     }
-    
+    // TODO add test methods here.
+    // The methods must be annotated with annotation @Test. For example:
+    //
+    // @Test
+    // public void hello() {}
+
     @Test
-    public void testAdd(){
-        System.out.print("add()");
-        double result = aFloat.add();
-        assertEquals(result, 8.9);
+    public void testAddition(){
+        System.out.println("addition()");
+        int result = aInt.addition();
+        assertEquals(result, 14);
     }
     
     @BeforeClass
     public static void setUpClass() throws Exception {
         ctx = new AnnotationConfigApplicationContext(AppConfig.class);
-        flt = (AssertFloat)ctx.getBean("AssertFloat");
-        aFloat = new AssertFloat();
+        intI = (AssertInt)ctx.getBean("AssertInt");
+        aInt = new AssertInt();
     }
 
     @AfterClass
