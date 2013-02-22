@@ -4,6 +4,10 @@
  */
 package com.configfile;
 
+import com.karriem.tp.ArrayListClass;
+import com.karriem.tp.ArrayListInterface;
+import com.karriem.tp.AssertEquality;
+import com.karriem.tp.AssertEqualityInterface;
 import com.karriem.tp.AssertFalse;
 import com.karriem.tp.AssertFloat;
 import com.karriem.tp.AssertInt;
@@ -41,5 +45,15 @@ public class AppConfig {
     @Bean(name = "AssertFalse")
     public FalseInterface notFalse(){
         return new AssertFalse();
+    }
+    
+    @Bean(name = "ArrayListClass")
+    public ArrayListInterface arrayClass(){
+        return new ArrayListClass();
+    }
+    
+    @Bean(name = "AssertEquality")
+    public AssertEqualityInterface getString(){
+        return new AssertEquality();
     }
 }
